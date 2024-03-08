@@ -75,3 +75,5 @@ person4.introduce();
 let reveal = require('./revealModule');
 
 reveal();
+
+let exportDiff = require('./exportDifference')
