@@ -44,3 +44,8 @@ var age = 56;
 })(age)
  
 console.log(age);
+
+let namaskar = require("./namaskar");
+
+namaskar.marathiGreet();
+namaskar.hindiGreet();
