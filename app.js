@@ -45,7 +45,18 @@ var age = 56;
  
 console.log(age);
 
+//Require statement understanding
 let namaskar = require("./namaskar");
 
 namaskar.marathiGreet();
 namaskar.hindiGreet();
+
+//Require statement """cached""" the module
+let person1 = require('./one');
+person1.introduce();
+person1.quality = "greedy";
+
+let person2 = new require('./one');
+person2.introduce();
+//I am greedy instead of I am Honest
+//because require statement execute once and it is still pointing to same object which is pass to person1
