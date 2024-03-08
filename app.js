@@ -69,3 +69,9 @@ person3.quality = "Kind";
 
 let person4 = new personna();
 person4.introduce();
+
+
+//Revealing Module
+let reveal = require('./revealModule');
+
+reveal();
