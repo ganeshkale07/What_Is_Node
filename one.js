@@ -5,4 +5,7 @@ function Person(){
         console.log(`I am ${this.quality}`)
     }
 }
-module.exports = new Person();
+//module.exports = new Person();
+
+//To avoid caching
+module.exports = Person;

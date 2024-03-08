@@ -52,11 +52,20 @@ namaskar.marathiGreet();
 namaskar.hindiGreet();
 
 //Require statement """cached""" the module
-let person1 = require('./one');
-person1.introduce();
-person1.quality = "greedy";
+// let person1 = require('./one');
+// person1.introduce();
+// person1.quality = "greedy";
 
-let person2 = new require('./one');
-person2.introduce();
+// let person2 = new require('./one');
+// person2.introduce();
 //I am greedy instead of I am Honest
 //because require statement execute once and it is still pointing to same object which is pass to person1
+
+//To avoid caching
+let personna = require('./one');
+let person3 = new personna();
+person3.introduce();
+person3.quality = "Kind";
+
+let person4 = new personna();
+person4.introduce();
