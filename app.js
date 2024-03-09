@@ -97,3 +97,11 @@ console.log("Manullay 'Greeet' event happen");
 
 
 emitterInstance.emit('greet')
+
+//Import class from another module
+
+let greetOne = require('./moduleWIthClass');
+
+let greetOneInstance = new greetOne();
+
+greetOneInstance.greeting();    
