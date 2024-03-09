@@ -76,4 +76,24 @@ let reveal = require('./revealModule');
 
 reveal();
 
-let exportDiff = require('./exportDifference')
+let exportDiff = require('./exportDifference');
+
+//How eventEmitter works in Node js
+let emitter = require('./eventEmitter');
+
+let emitterInstance = new emitter();
+
+//Create and event - object property in short
+//add event listner 
+emitterInstance.on('greet' , function () {
+    console.log("Greet 1")
+})
+
+emitterInstance.on('greet' , function () {
+    console.log("Greet 2")
+})
+
+console.log("Manullay 'Greeet' event happen");
+
+
+emitterInstance.emit('greet')
